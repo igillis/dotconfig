@@ -5,3 +5,10 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "eruby.yaml",
   command = "set filetype=yaml",
 })
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFIle" }, {
+  pattern = { "*.json.erb" },
+  callback = function()
+    vim.bo.filetype = "json"
+  end,
+})
