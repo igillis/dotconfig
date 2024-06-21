@@ -4,7 +4,9 @@ return {
     opts = {
       format_notify = true,
       servers = {
+        ruby_lsp = {},
         solargraph = {
+          autostart = false,
           cmd = { os.getenv("HOME") .. "/.rbenv/shims/solargraph", "stdio" },
           settings = {
             solargraph = {
