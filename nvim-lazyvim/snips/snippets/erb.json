@@ -1,0 +1,16 @@
+{
+  "t": {
+    "prefix": "t",
+    "body": [
+      "<%= t \"${1:translateval}\" %>"
+    ],
+    "description": "t \"...\""
+  },
+  "t.": {
+    "prefix": "t.",
+    "body": [
+      "<%= t \".${1:translateval}\" %>"
+    ],
+    "description": "t \". ...\""
+  }
+}
