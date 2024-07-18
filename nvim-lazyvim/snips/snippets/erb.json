@@ -6,8 +6,8 @@
     ],
     "description": "t \"...\""
   },
-  "t.": {
-    "prefix": "t.",
+  "tdot": {
+    "prefix": "tdot",
     "body": [
       "<%= t \".${1:translateval}\" %>"
     ],
