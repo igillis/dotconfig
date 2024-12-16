@@ -4,6 +4,7 @@ return {
     opts = {
       format_notify = true,
       servers = {
+        rubocop = { enabled = false },
         ruby_lsp = {},
         solargraph = {
           autostart = false,
