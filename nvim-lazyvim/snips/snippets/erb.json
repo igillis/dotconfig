@@ -1,6 +1,6 @@
 {
-  "t": {
-    "prefix": "t",
+  "tee": {
+    "prefix": "tee",
     "body": [
       "<%= t \"${1:translateval}\" %>"
     ],
@@ -12,5 +12,12 @@
       "<%= t \".${1:translateval}\" %>"
     ],
     "description": "t \". ...\""
+  },
+  "eq": {
+    "prefix": "eq",
+    "body": [
+      "<%= ${1:} %>"
+    ],
+    "description": "<%= ... %>"
   }
 }
