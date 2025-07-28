@@ -1,0 +1,63 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$os \
+$username\
+$directory\
+$git_branch\
+$git_status\
+$git_metrics\
+$ruby\
+$nodejs\
+$time\
+$line_break\
+$character"""
+[os]
+disabled = false
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = false
+
+[lua]
+disabled = true
+
+[git_metrics]
+disabled = false
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+
+[ruby]
+disabled = true
+
+[nodejs]
+disabled = true
+
+# [directory]
+# format = " $path "
+# truncation_length = 3
+# truncation_symbol = "…/"

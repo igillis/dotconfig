@@ -1,0 +1,99 @@
+2025-04-21 14:07:47,320 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2025-04-21 14:07:47,322 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations']
+2025-04-21 14:07:47,323 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations', 'describe']
+2025-04-21 14:07:47,324 DEBUG    root            Running [gcloud.config.configurations.describe] with arguments: [--format: "value[separator=""](properties.core.account,properties.core.project)", CONFIGURATION_NAME: "default"]
+2025-04-21 14:07:47,325 DEBUG    root            Chosen display Format:default value[separator=""](properties.core.account,properties.core.project)
+2025-04-21 14:07:47,325 INFO     root            Display format: "default value[separator=""](properties.core.account,properties.core.project)"
+2025-04-21 14:07:47,336 INFO     ___FILE_ONLY___ ian@clarahomecare.comclara-production-430316
+
+2025-04-21 14:07:47,337 DEBUG    root            Checking for updates...
+2025-04-21 14:07:47,412 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): dl.google.com:443
+2025-04-21 14:07:50,442 DEBUG    root            Failed to perform update check.
+Traceback (most recent call last):
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 1098, in _validate_conn
+    conn.connect()
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/connection.py", line 657, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/connection.py", line 810, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1112: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/util/retry.py", line 475, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 369, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='dl.google.com', port=443): Read timed out. (read timeout=3)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/gcloud_main.py", line 62, in UpdateCheck
+    update_manager.UpdateManager.PerformUpdateCheck(command_path=command_path)
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 314, in PerformUpdateCheck
+    manager._PerformUpdateCheck(command_path, force=force)
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 731, in _PerformUpdateCheck
+    (_, diff) = self._GetStateAndDiff(
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 685, in _GetStateAndDiff
+    latest_snapshot = self._GetLatestSnapshot(version=version,
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 668, in _GetLatestSnapshot
+    return snapshots.ComponentSnapshot.FromURLs(
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/snapshots.py", line 175, in FromURLs
+    data = [
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/snapshots.py", line 176, in <listcomp>
+    (ComponentSnapshot._DictFromURL(
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/snapshots.py", line 200, in _DictFromURL
+    response = installers.MakeRequest(url, command_path)
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/installers.py", line 115, in MakeRequest
+    return _RawRequest(url, headers=headers, timeout=timeout)
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/installers.py", line 163, in _RawRequest
+    return retryer.RetryOnException(
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 201, in RetryOnException
+    exceptions.reraise(exc_info[1], tb=exc_info[2])
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 149, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/six/__init__.py", line 719, in reraise
+    raise value
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 182, in TryFunc
+    return func(*args, **kwargs), None
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/updater/installers.py", line 196, in _ExecuteRequestAndRaiseExceptions
+    response = requests_session.get(
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/transport.py", line 269, in WrappedRequest
+    response = orig_request(*modified_args, **modified_kwargs)
+  File "/Users/iangillis/google-cloud-sdk/lib/googlecloudsdk/core/requests.py", line 247, in WrappedRequest
+    return orig_request_method(*args, **kwargs)
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/iangillis/google-cloud-sdk/lib/third_party/requests/adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='dl.google.com', port=443): Read timed out. (read timeout=3)

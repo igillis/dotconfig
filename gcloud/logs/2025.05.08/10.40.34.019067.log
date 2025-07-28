@@ -1,0 +1,8 @@
+2025-05-08 10:40:34,020 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2025-05-08 10:40:34,020 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations']
+2025-05-08 10:40:34,021 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations', 'describe']
+2025-05-08 10:40:34,022 DEBUG    root            Running [gcloud.config.configurations.describe] with arguments: [--format: "value[separator=""](properties.core.account,properties.core.project)", CONFIGURATION_NAME: "default"]
+2025-05-08 10:40:34,023 DEBUG    root            Chosen display Format:default value[separator=""](properties.core.account,properties.core.project)
+2025-05-08 10:40:34,023 INFO     root            Display format: "default value[separator=""](properties.core.account,properties.core.project)"
+2025-05-08 10:40:34,032 INFO     ___FILE_ONLY___ ian@clarahomecare.comclara-production-430316
+

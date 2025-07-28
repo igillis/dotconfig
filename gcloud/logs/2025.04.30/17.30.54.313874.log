@@ -1,0 +1,5 @@
+2025-04-30 17:30:54,325 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2025-04-30 17:30:54,329 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2025-04-30 17:30:54,330 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "ian@clarahomecare.com", --configuration: "default", --format: "value(name)", PROJECT_ID_OR_NUMBER: "clara-production-430316"]
+2025-04-30 17:30:54,345 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2025-04-30 17:30:54,350 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
